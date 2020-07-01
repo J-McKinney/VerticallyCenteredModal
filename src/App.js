@@ -1,8 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Button from "react-bootstrap/Button";
+import MyModal from "./MyModal/MyModal";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  const [modalShow, setModalShow] = React.useState(false);
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +21,12 @@ function App() {
         >
           Learn React
         </a>
+        <br />
+        <Button variant="primary" onClick={() => setModalShow(true)}>
+          Launch vertically centered modal
+        </Button>
+
+        <MyModal show={modalShow} onHide={() => setModalShow(false)} />
       </header>
     </div>
   );
