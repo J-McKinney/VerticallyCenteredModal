@@ -23,7 +23,7 @@ function App() {
         </a>
         <br />
         <Button variant="primary" onClick={() => setModalShow(true)}>
-          Launch vertically centered modal
+          Launch Vertically Centered Modal
         </Button>
 
         <MyModal show={modalShow} onHide={() => setModalShow(false)} />
